@@ -1,3 +1,6 @@
+# Ignore my output dir
+output
+
 # Compiled class file
 *.class
 
