@@ -1,6 +1,9 @@
 # Ignore my output dir
 output
 
+# Ignore vscode files
+.vscode
+
 # Compiled class file
 *.class
 
