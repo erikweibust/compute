@@ -1,6 +1,9 @@
 # Ignore my output dir
 output
 
+# Ignore swp files
+*.swp
+
 # Ignore vscode files
 .vscode
 

@@ -3,6 +3,8 @@ package com.agiledeveloper.user;
 import com.agiledeveloper.compute.Calculator;
 import com.agiledeveloper.compute.Fibonacci;
 
+import java.lang.reflect.Method;
+
 public class User {
     
     public static void main( String[] args ) {
@@ -13,7 +15,18 @@ public class User {
 
         Fibonacci fib = calculator.createFibonacci();
         System.out.println( fib.fib( 5 ));
-        System.out.println( fib );
+        
         System.out.println( fib.getClass() );
+
+        try {
+            Method method = fib.getClass().getMethod("hidden");
+
+            System.out.println( method );
+            //method.invoke( fib );
+
+        } catch ( Exception exception) {
+            System.out.println( "ERROR: " + exception );
+        }
+        
     }
 }

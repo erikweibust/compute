@@ -10,4 +10,8 @@ public class FibonacciRecursive implements Fibonacci {
 
         return fib( position - 1 ) + fib ( position - 2 );
     }
+
+    public void hidden() {
+        System.out.println( "you called the hidden method" );
+    }
 }
