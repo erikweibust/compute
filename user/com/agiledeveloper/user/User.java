@@ -18,11 +18,15 @@ public class User {
         
         System.out.println( fib.getClass() );
 
+        //com.agiledeveloper.fibonacci.FibonacciRecursive fb = null;
+
         try {
+            
+
             Method method = fib.getClass().getMethod("hidden");
 
             System.out.println( method );
-            //method.invoke( fib );
+            method.invoke( fib );
 
         } catch ( Exception exception) {
             System.out.println( "ERROR: " + exception );
