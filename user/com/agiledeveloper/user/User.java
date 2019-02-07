@@ -1,36 +1,19 @@
 package com.agiledeveloper.user;
 
-import com.agiledeveloper.compute.Calculator;
-import com.agiledeveloper.compute.Fibonacci;
-
 import java.lang.reflect.Method;
 
 public class User {
     
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws Exception {
         System.out.println( "Hello this is User" );
 
-        Calculator calculator = new Calculator();
-        System.out.println( calculator.add( 1, 2 ));
+        Class klass = Class.forName( "com.agiledeveloper.compute.Calculator" );
+        Object obj = klass.newInstance();
 
-        Fibonacci fib = calculator.createFibonacci();
-        System.out.println( fib.fib( 5 ));
-        
-        System.out.println( fib.getClass() );
+        Method foo = klass.getMethod("foo");
+        System.out.println( foo );
 
-        //com.agiledeveloper.fibonacci.FibonacciRecursive fb = null;
-
-        try {
-            
-
-            Method method = fib.getClass().getMethod("hidden");
-
-            System.out.println( method );
-            method.invoke( fib );
-
-        } catch ( Exception exception) {
-            System.out.println( "ERROR: " + exception );
-        }
-        
+        foo.invoke(obj);
+    
     }
 }
