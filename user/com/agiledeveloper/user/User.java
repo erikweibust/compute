@@ -1,19 +1,18 @@
 package com.agiledeveloper.user;
 
-import java.lang.reflect.Method;
+import com.agiledeveloper.compute.Calculator;
 
 public class User {
     
     public static void main( String[] args ) throws Exception {
         System.out.println( "Hello this is User" );
 
-        Class klass = Class.forName( "com.agiledeveloper.compute.Calculator" );
-        Object obj = klass.newInstance();
+        Calculator calculator = new Calculator();
 
-        Method foo = klass.getMethod("foo");
-        System.out.println( foo );
+        System.out.println( calculator.add(4, 5) );
+    }
 
-        foo.invoke(obj);
-    
+    public String getInfo() {
+        return String.format( "%d", new Calculator().add( 6, 4 ));
     }
 }

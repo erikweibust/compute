@@ -1,6 +1,6 @@
 // contextual keyword
 module com.agiledeveloper.computation { // use 'open' to open entire module
-    opens com.agiledeveloper.compute;
+    exports com.agiledeveloper.compute;
 
     //opens com.agiledeveloper.fibonacci; // better to only open a single package over all packages.
 }

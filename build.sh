@@ -10,4 +10,8 @@ javac -d output/classes -p output/mlib `find user -name *.java`;
 jar -c -f output/mlib/user.jar --main-class com.agiledeveloper.user.User --module-version 2.0.1 -C output/classes .;
 /bin/rm -rf output/classes/*;
 
-java -p output/mlib -m com.agiledeveloper.user
+javac -d output/classes -p output/mlib `find third -name *.java`;
+jar -c -f output/mlib/third.jar --main-class com.agiledeveloper.third.Third --module-version 2.0.1 -C output/classes .;
+/bin/rm -rf output/classes/*;
+
+java -p output/mlib -m com.agiledeveloper.third
