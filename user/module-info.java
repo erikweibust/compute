@@ -1,5 +1,5 @@
 module com.agiledeveloper.user {
-    requires com.agiledeveloper.computation;
+    requires transitive com.agiledeveloper.computation;
 
     exports com.agiledeveloper.user;
 }
