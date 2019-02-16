@@ -1,0 +1,2 @@
+JAVA_VERSION="10.0.1"
+MODULES="java.base com.agiledeveloper.computation com.agiledeveloper.user com.agiledeveloper.third"
