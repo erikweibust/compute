@@ -1,5 +1,6 @@
 # Ignore my output dir
 output
+targeted/agiledeveloper
 
 # Ignore swp files
 *.swp
